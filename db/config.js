@@ -1,3 +1,3 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/assignment');
+mongoose.connect('mongodb+srv://test:test123@cluster0.rqzfmzk.mongodb.net/assign?retryWrites=true&w=majority');
