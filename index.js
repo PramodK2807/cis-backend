@@ -95,7 +95,7 @@ app.post('/login', async (req, res) => {
         if (!matchPassword) {
             return res.status(404).send({
                 success: false,
-                message: "Invalid password",
+                message: "Invalid email or password",
             })
         }
 
@@ -109,7 +109,7 @@ app.post('/login', async (req, res) => {
             user: {
                 _id: user._id,
                 name: user.name,
-                email: user.email,
+                email: user.email
             },
             token
         })
@@ -121,6 +121,7 @@ app.post('/login', async (req, res) => {
         })
     }
 })
+
 
 app.patch('/update/:id', async(req, res) => {
     let {name, email, password} = req.body;
